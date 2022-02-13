@@ -21,8 +21,10 @@ class SplashscreenActivity : AppCompatActivity() {
         supportActionBar?.hide() //hiding the action bar
 
         val logo = SplashScreenBinding.logo
+        val wm = SplashScreenBinding.wm
         val slideAnim = AnimationUtils.loadAnimation(this, R.anim.splash_anim)
         logo.startAnimation(slideAnim)
+        wm.startAnimation(slideAnim)
 
         val background = object :Thread(){
             override fun run() {

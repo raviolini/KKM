@@ -36,7 +36,7 @@
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.recyclerview.widget.RecyclerView
+   <!-- <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerHome"
         android:visibility="visible"
         android:layout_width="0dp"
@@ -45,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/input_holder"
-        tools:listitem="@layout/list_layout_kos" />
+        tools:listitem="@layout/list_layout_kos" />-->
 
 
 </LinearLayout>

@@ -23,6 +23,7 @@
         app:layout_constraintVertical_bias="0.369" />
 
     <ImageView
+        android:id="@+id/wm"
         android:layout_width="158dp"
         android:layout_height="92dp"
         android:layout_gravity="center"

@@ -3,4 +3,5 @@
     <string name="search_placeholderHint">Cari Nama Kos di Sini</string>
     <string name="main_name_placeholder">Nama KOS</string>
     <string name="deskripsi_img_list">gambar kosnya</string>
+    <string name="txt_wm">watermark</string>
 </resources>

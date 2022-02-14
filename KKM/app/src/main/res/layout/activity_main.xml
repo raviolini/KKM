@@ -36,16 +36,13 @@
 
     </androidx.cardview.widget.CardView>
 
-   <!-- <androidx.recyclerview.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="50dp"
         android:id="@+id/recyclerHome"
         android:visibility="visible"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input_holder"
-        tools:listitem="@layout/list_layout_kos" />-->
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/list_layout_kos" />
 
 
 </LinearLayout>

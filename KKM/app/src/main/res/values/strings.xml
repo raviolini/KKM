@@ -4,4 +4,6 @@
     <string name="main_name_placeholder">Nama KOS</string>
     <string name="deskripsi_img_list">gambar kosnya</string>
     <string name="txt_wm">watermark</string>
+    <string name="imagedescriptionNotFound">can\'t search for that query</string>
+    <string name="kos_not_found">Can\'t Find the data</string>
 </resources>

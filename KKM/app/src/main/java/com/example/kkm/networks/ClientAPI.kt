@@ -7,4 +7,7 @@ interface ClientAPI {
     @GET("kosts")
     suspend fun getAllKost() : Item
 
+    @GET("TODO")
+    abstract fun searchForItem(query: String): Any
+
 }

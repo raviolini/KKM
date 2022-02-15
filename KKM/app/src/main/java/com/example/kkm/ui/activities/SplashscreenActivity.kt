@@ -1,21 +1,19 @@
-package com.example.kkm.ui
+package com.example.kkm.ui.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
-import android.window.SplashScreen
 import com.example.kkm.R
-import com.example.kkm.databinding.ActivitySlashscreenBinding
-import com.example.kkm.ui.activities.MainActivity
+import com.example.kkm.databinding.ActivitySplashscreenBinding
 
 @SuppressLint("CustomSplashScreen")
 class SplashscreenActivity : AppCompatActivity() {
-    private lateinit var SplashScreenBinding : ActivitySlashscreenBinding
+    private lateinit var SplashScreenBinding : ActivitySplashscreenBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        SplashScreenBinding = ActivitySlashscreenBinding.inflate(layoutInflater)
+        SplashScreenBinding = ActivitySplashscreenBinding.inflate(layoutInflater)
         setContentView(SplashScreenBinding.root)
 
         supportActionBar?.hide() //hiding the action bar

@@ -2,12 +2,15 @@ package com.example.kkm.networks
 
 import com.example.kkm.data.kos.Item
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface ClientAPI {
     @GET("kosts")
-    suspend fun getAllKost() : Item
+    suspend fun getAllKost() : List<Item>
 
-    @GET("TODO")
-    abstract fun searchForItem(query: String): Any
+    @GET("kosts")
+    abstract fun searchForItem(
+        @Query("q")q: String?
+    ): List<Item>
 
 }

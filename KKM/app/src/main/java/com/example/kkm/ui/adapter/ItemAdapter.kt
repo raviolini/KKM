@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.kkm.data.kos.Item
 import com.example.kkm.databinding.ListLayoutKosBinding
 
-class ItemAdapter(private val dataItem : ArrayList<Item>, private val clickListener :
-    (String, View)->Unit): RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
+class ItemAdapter(private val dataItem : ArrayList<Item>, private val clickListener : (String, View)->Unit) :
+    RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
         inner class ItemViewHolder(private val binding : ListLayoutKosBinding) : RecyclerView.ViewHolder(binding.root){
             fun bind(item : Item,click: (String, View) -> Unit ){

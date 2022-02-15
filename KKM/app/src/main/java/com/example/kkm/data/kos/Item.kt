@@ -7,8 +7,8 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Item(
 
-    @field:Json(name = "id")
-    val id : String,
+    @field:Json(name = "_id")
+    val _id : String,
 
     @field:Json(name = "name")
     val name : String,

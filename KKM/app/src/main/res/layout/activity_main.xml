@@ -12,37 +12,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/input_holder"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="3dp">
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="2"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-        <androidx.appcompat.widget.SearchView
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_host_fragment_container"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            app:defaultNavHost="true"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/search_bar"
-            app:searchIcon="@drawable/ic_search_white"
-            app:iconifiedByDefault="false"
-            android:focusable="true"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:navGraph = "@navigation/main_navigation"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintBottom_toTopOf="parent"
+            tools:ignore="NestedWeights"/>
 
-            app:queryBackground="@color/white"
-            app:queryHint="@string/search_placeholderHint"
-            app:showDividers="end"/>
+    </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="50dp"
-        android:id="@+id/recyclerHome"
-        android:visibility="visible"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:listitem="@layout/list_layout_kos" />
 
 
 </LinearLayout>

@@ -8,4 +8,5 @@
     <string name="kos_not_found">Can\'t Find the data</string>
     <string name="txt_ini_detail">ini detail</string>
     <string name="search_for_kos">Search For A Boarding House Here</string>
+    <string name="item_not_found_txt">can\'t find item</string>
 </resources>

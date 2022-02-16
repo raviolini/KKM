@@ -12,5 +12,6 @@ Developed by me and the boys, be part of us by [contributing](https://github.com
 ### Home 
 <img src="https://github.com/raviolini/dev-snapshot/blob/main/kkm/home.jpeg" width="300"/>
 
-### Search ![!Alt Text](https://github.com/raviolini/dev-snapshot/blob/main/kkm/search.jpeg) 
-> TODO : bind the image from the api
+### Search ![!Alt Text](https://github.com/raviolini/dev-snapshot/blob/main/kkm/search.png) 
+
+> TODO : creating the details activity (still waiting the design from Noval)

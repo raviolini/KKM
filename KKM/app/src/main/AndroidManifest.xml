@@ -17,6 +17,7 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".ui.activities.SplashscreenActivity"
+            android:noHistory="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

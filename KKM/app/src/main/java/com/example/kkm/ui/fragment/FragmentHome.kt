@@ -77,20 +77,23 @@ class FragmentHome  : Fragment(), ShowStates{
                         MyStates.IS_SUCCESS -> {
                             resourceStats.data?.let { items ->
                                 if (!items.isNullOrEmpty()) {
+                                    FancyToast.makeText(context, "found!", FancyToast.LENGTH_LONG, FancyToast.SUCCESS, true)
                                     homeSuccess(bindingHome)
                                     homeAdapter.setItemData(items)
                                 } else {
                                     homeError(bindingHome, null)
+                                    FancyToast.makeText(context, "something happened", FancyToast.LENGTH_LONG, FancyToast.ERROR, true)
                                 }
                             }
                         }
                         MyStates.IS_LOADING -> {
                             homeLoading(bindingHome)
+                            FancyToast.makeText(context, "loading", FancyToast.LENGTH_LONG, FancyToast.INFO, true)
                         }
 
                         MyStates.IS_ERROR ->{
-                            homeError(bindingHome, it.message)
                             FancyToast.makeText(context, it.message, FancyToast.LENGTH_LONG, FancyToast.ERROR, true)
+                            homeError(bindingHome, it.message)
                         }
                     }
                 }

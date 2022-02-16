@@ -8,8 +8,9 @@
     <application
         android:allowBackup="true"
         android:configChanges="orientation|screenSize"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/kkm_logo_full"
         android:label="@string/app_name"
+        android:noHistory="true"
         android:roundIcon="@drawable/kkm_logo_full"
         android:supportsRtl="true"
         android:theme="@style/Theme.KKM"

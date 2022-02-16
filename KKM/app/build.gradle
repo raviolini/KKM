@@ -83,7 +83,7 @@ dependencies {
     kapt('com.github.bumptech.glide:compiler:4.12.0')
 
     //rotate loading lib
-    implementation 'com.victor:lib:1.0.4'
+    //implementation 'com.victor:lib:1.0.4'
 
     // Navigation
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'

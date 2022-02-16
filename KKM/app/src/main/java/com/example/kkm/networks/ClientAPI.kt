@@ -9,7 +9,7 @@ interface ClientAPI {
     suspend fun getAllKost() : List<Item>
 
     @GET("kosts")
-    abstract fun searchForItem(
+    suspend fun searchForItem(
         @Query("q")q: String?
     ): List<Item>
 

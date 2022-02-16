@@ -16,6 +16,7 @@ import com.example.kkm.misc.MyStates
 import com.example.kkm.misc.ShowStates
 import com.example.kkm.ui.adapter.ItemAdapter
 import com.example.kkm.ui.vm.HomeVM
+import com.shashank.sony.fancytoastlib.FancyToast
 
 class FragmentHome  : Fragment(), ShowStates{
     private lateinit var bindingHome : FragmentHomeBinding
@@ -89,6 +90,7 @@ class FragmentHome  : Fragment(), ShowStates{
 
                         MyStates.IS_ERROR ->{
                             homeError(bindingHome, it.message)
+                            FancyToast.makeText(context, it.message, FancyToast.LENGTH_LONG, FancyToast.ERROR, true)
                         }
                     }
                 }
@@ -118,8 +120,10 @@ class FragmentHome  : Fragment(), ShowStates{
         bindingHome.apply {
             errorLayout.apply {
                 mainNotFound.visibility = visible
-                emptyText.text = message ?: getString(R.string.item_not_found_txt)
+                emptyText.visibility = gone
+                //emptyText.text = message ?: getString(R.string.item_not_found_txt)
             }
+
             progressBar.visibility = gone
             recyclerHome.visibility = gone
         }

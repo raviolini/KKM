@@ -11,6 +11,4 @@ class DetailVM : ViewModel(){
 
     private val itemName : MutableLiveData<String> = MutableLiveData()
 
-    /*val searchResult : LiveData<ResourceStats<List<Item>>> = Transformations
-        .switchMap(itemName)*/
 }

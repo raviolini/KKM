@@ -78,12 +78,12 @@ class FragmentHome  : Fragment(), ShowStates{
                             bindingHome.progressBar.visibility = gone
                             resourceStats.data?.let { items ->
                                 if (!items.isNullOrEmpty()) {
-                                    FancyToast.makeText(context, "found!", FancyToast.LENGTH_LONG, FancyToast.SUCCESS, true)
+                                    FancyToast.makeText(context, "found!", FancyToast.LENGTH_LONG, FancyToast.SUCCESS, false).show()
                                     homeSuccess(bindingHome)
                                     homeAdapter.setItemData(items)
                                 } else {
                                     homeError(bindingHome, null)
-                                    FancyToast.makeText(context, "something happened", FancyToast.LENGTH_LONG, FancyToast.ERROR, true)
+                                    FancyToast.makeText(context, "something happened", FancyToast.LENGTH_LONG, FancyToast.ERROR, false).show()
                                 }
                             }
                         }
@@ -91,12 +91,13 @@ class FragmentHome  : Fragment(), ShowStates{
                             bindingHome.progressBar.visibility = visible
                             homeLoading(bindingHome)
 
-                            FancyToast.makeText(context, "loading", FancyToast.LENGTH_LONG, FancyToast.INFO, true)
+                            FancyToast.makeText(context, "loading", FancyToast.LENGTH_LONG, FancyToast.INFO, false).show()
+
                         }
 
                         MyStates.IS_ERROR ->{
                             bindingHome.progressBar.visibility = gone
-                            FancyToast.makeText(context, it.message, FancyToast.LENGTH_LONG, FancyToast.ERROR, true)
+                            FancyToast.makeText(context, it.message, FancyToast.LENGTH_LONG, FancyToast.ERROR, false).show()
                             homeError(bindingHome, it.message)
                         }
                     }

@@ -44,7 +44,7 @@ class FragmentHome  : Fragment(), ShowStates{
                 )
             )
         }
-
+        bindingHome.progressBar.visibility = View.VISIBLE
         bindingHome.recyclerHome.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             adapter = homeAdapter
@@ -75,6 +75,7 @@ class FragmentHome  : Fragment(), ShowStates{
                 it?.let { resourceStats ->
                     when (resourceStats.states) {
                         MyStates.IS_SUCCESS -> {
+                            bindingHome.progressBar.visibility = gone
                             resourceStats.data?.let { items ->
                                 if (!items.isNullOrEmpty()) {
                                     FancyToast.makeText(context, "found!", FancyToast.LENGTH_LONG, FancyToast.SUCCESS, true)
@@ -87,11 +88,14 @@ class FragmentHome  : Fragment(), ShowStates{
                             }
                         }
                         MyStates.IS_LOADING -> {
+                            bindingHome.progressBar.visibility = visible
                             homeLoading(bindingHome)
+
                             FancyToast.makeText(context, "loading", FancyToast.LENGTH_LONG, FancyToast.INFO, true)
                         }
 
                         MyStates.IS_ERROR ->{
+                            bindingHome.progressBar.visibility = gone
                             FancyToast.makeText(context, it.message, FancyToast.LENGTH_LONG, FancyToast.ERROR, true)
                             homeError(bindingHome, it.message)
                         }
@@ -104,7 +108,7 @@ class FragmentHome  : Fragment(), ShowStates{
     override fun homeLoading(bindingHome: FragmentHomeBinding): Int? {
         bindingHome.apply {
             errorLayout.mainNotFound.visibility = gone
-            progressBar.visibility = visible
+
             recyclerHome.visibility = gone
         }
         return super.homeLoading(bindingHome)
@@ -113,7 +117,7 @@ class FragmentHome  : Fragment(), ShowStates{
     override fun homeSuccess(bindingHome: FragmentHomeBinding): Int? {
         bindingHome.apply {
             errorLayout.mainNotFound.visibility = gone
-            progressBar.visibility = gone
+
             recyclerHome.visibility = visible
         }
         return super.homeSuccess(bindingHome)
@@ -127,7 +131,7 @@ class FragmentHome  : Fragment(), ShowStates{
                 //emptyText.text = message ?: getString(R.string.item_not_found_txt)
             }
 
-            progressBar.visibility = gone
+
             recyclerHome.visibility = gone
         }
         return super.homeError(bindingHome, message)

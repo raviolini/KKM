@@ -8,7 +8,7 @@
     <data>
         <variable
             name = "data"
-            type="com.example.kkm.data.kos.Item"
+            type="com.raviolini.kkm.data.kos.Item"
             />
     </data>
 

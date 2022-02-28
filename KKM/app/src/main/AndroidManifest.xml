@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.kkm">
+    package="com.raviolini.kkm">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -16,7 +16,7 @@
         android:theme="@style/Theme.KKM"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ui.activities.SplashscreenActivity"
+            android:name="com.raviolini.kkm.ui.activities.SplashscreenActivity"
             android:noHistory="true"
             android:exported="true">
             <intent-filter>
@@ -26,7 +26,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activities.MainActivity"
+            android:name="com.raviolini.kkm.ui.activities.MainActivity"
             android:exported="true"
             android:noHistory="true">
             <intent-filter>

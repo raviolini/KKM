@@ -12,16 +12,16 @@ import com.example.kkm.databinding.ActivitySplashscreenBinding
 
 @SuppressLint("CustomSplashScreen")
 class SplashscreenActivity : AppCompatActivity() {
-    private lateinit var SplashScreenBinding : ActivitySplashscreenBinding
+    private lateinit var splashScreenBinding : ActivitySplashscreenBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        SplashScreenBinding = ActivitySplashscreenBinding.inflate(layoutInflater)
-        setContentView(SplashScreenBinding.root)
+        splashScreenBinding = ActivitySplashscreenBinding.inflate(layoutInflater)
+        setContentView(splashScreenBinding.root)
 
         supportActionBar?.hide() //hiding the action bar
 
-        val logo = SplashScreenBinding.logo
-        val wm = SplashScreenBinding.wm
+        val logo = splashScreenBinding.logo
+        val wm = splashScreenBinding.wm
         val slideAnim = AnimationUtils.loadAnimation(this, R.anim.splash_anim)
         logo.startAnimation(slideAnim)
         wm.startAnimation(slideAnim)

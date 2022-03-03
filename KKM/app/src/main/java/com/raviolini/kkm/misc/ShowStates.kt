@@ -1,7 +1,8 @@
 package com.raviolini.kkm.misc
 
 import android.view.View
-import com.raviolini.kkm.databinding.FragmentHomeBinding
+import com.example.kkm.databinding.*
+
 
 interface ShowStates {
     fun homeLoading(bindingHome : FragmentHomeBinding) : Int? = null

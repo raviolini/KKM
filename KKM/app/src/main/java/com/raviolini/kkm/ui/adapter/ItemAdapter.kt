@@ -5,8 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.kkm.databinding.ListLayoutKosBinding
 import com.raviolini.kkm.data.kos.Item
-import com.raviolini.kkm.databinding.ListLayoutKosBinding
+
 
 class ItemAdapter(private val dataItem : ArrayList<Item>, private val clickListener : (String, View)->Unit) :
     RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {

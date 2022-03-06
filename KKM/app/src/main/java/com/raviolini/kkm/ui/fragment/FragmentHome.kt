@@ -10,8 +10,8 @@ import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navGraphViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.raviolini.kkm.R
-import com.raviolini.kkm.databinding.FragmentHomeBinding
+import com.example.kkm.R
+import com.example.kkm.databinding.FragmentHomeBinding
 import com.raviolini.kkm.misc.MyStates
 import com.raviolini.kkm.misc.ShowStates
 import com.raviolini.kkm.ui.adapter.ItemAdapter

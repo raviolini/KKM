@@ -5,8 +5,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
-import com.example.kkm.R
-import com.example.kkm.databinding.ActivitySplashscreenBinding
+import com.raviolini.kkm.R
+import com.raviolini.kkm.databinding.ActivitySplashscreenBinding
 
 
 

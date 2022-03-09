@@ -1,7 +1,7 @@
 package com.raviolini.kkm.misc
 
 import android.view.View
-import com.example.kkm.databinding.*
+import com.raviolini.kkm.databinding.*
 
 
 interface ShowStates {

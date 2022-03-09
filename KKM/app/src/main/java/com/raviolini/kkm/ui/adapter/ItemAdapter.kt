@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.raviolini.kkm.databinding.ListLayoutKosBinding
+import com.raviolini .kkm.databinding.ListLayoutKosBinding
 import com.raviolini.kkm.data.kos.Item
 
 

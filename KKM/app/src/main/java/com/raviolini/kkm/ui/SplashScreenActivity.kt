@@ -5,8 +5,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
-import com.asthiseta.submission2madedicoding.R
-import com.asthiseta.submission2madedicoding.databinding.ActivitySplashScreenBinding
+import com.raviolini.kkm.R
+import com.raviolini.kkm.databinding.ActivitySplashScreenBinding
 
 
 @SuppressLint("CustomSplashScreen")

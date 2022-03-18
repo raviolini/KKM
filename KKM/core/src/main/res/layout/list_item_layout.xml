@@ -8,7 +8,7 @@
 
         <variable
             name="data"
-            type="com.asthiseta.core.domain.model.Item" />
+            type="com.raviolini.core.domain.model.Item" />
     </data>
 
 

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/home_destination"
-        android:name="com.asthiseta.submission2madedicoding.home.FragmentHome"
+        android:name="com.raviolini.kkm.home.FragmentHome"
         android:label="home_fragment"
         tools:layout="@layout/fragment_home" >
         <action
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/favorite_destination"
-        android:name="com.asthiseta.favorite.FragmentFavorite"
+        android:name="com.raviolini.favorite.FragmentFavorite"
         android:label="favorite_fragment"
         tools:layout="@layout/fragment_favorite" >
         <action
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/detail_destination"
-        android:name="com.asthiseta.submission2madedicoding.detail.FragmentDetail"
+        android:name="com.raviolini.kkm.detail.FragmentDetail"
         android:label="detail_fragment"
         tools:layout="@layout/fragment_detail" >
         <argument

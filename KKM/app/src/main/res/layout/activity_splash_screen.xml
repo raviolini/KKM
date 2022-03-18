@@ -22,7 +22,7 @@
         android:layout_width="158dp"
         android:layout_height="92dp"
         android:layout_gravity="center"
-
+        android:id="@+id/wm"
         android:contentDescription="@string/txt_wm"
         android:src="@drawable/lightbgwatermark"
         app:layout_constraintBottom_toBottomOf="parent"

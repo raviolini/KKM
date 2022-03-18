@@ -5,8 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
-import com.raviolini.kkm.R
-import com.raviolini.kkm.databinding.ActivitySplashScreenBinding
+import com.asthiseta.submission2madedicoding.R
+import com.asthiseta.submission2madedicoding.databinding.ActivitySplashScreenBinding
+
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
@@ -21,9 +22,11 @@ class SplashScreenActivity : AppCompatActivity() {
         supportActionBar?.hide() //hiding the action bar
 
         val logo = splashBinding.logo
+        val watermark = splashBinding.wm
         val slideAnim = AnimationUtils.loadAnimation(this, R.anim.splash_anim)
 
         logo.startAnimation(slideAnim)
+        watermark.startAnimation(slideAnim)
 
         val background = object :Thread(){
             override fun run() {

@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.activities.MainActivity">
+    tools:context="com.raviolini.kkm.ui.MainActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/main_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/nav_host" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,22 +21,25 @@
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/nav_host_fragment_container"
+            android:id="@+id/nav_host"
             android:name="androidx.navigation.fragment.NavHostFragment"
-            app:defaultNavHost="true"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            app:navGraph = "@navigation/main_navigation"
+            app:defaultNavHost="true"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-            app:layout_constraintTop_toBottomOf="@id/toolbar"
-            app:layout_constraintBottom_toTopOf="parent"
-            tools:ignore="NestedWeights"/>
+            app:layout_constraintBottom_toTopOf="@id/bottom_nav"
+            app:navGraph="@navigation/main_navigation"
+            tools:ignore="NestedWeights" />
 
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            app:menu="@menu/nav_menu_bottom"
+            app:layout_constraintTop_toBottomOf="@id/nav_host"/>
 
     </LinearLayout>
-
-
-
 
 </LinearLayout>

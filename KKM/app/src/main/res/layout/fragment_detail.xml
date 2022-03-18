@@ -1,32 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/emptyText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_ini_detail"
+    <data>
 
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <import type="android.view.View" />
 
-    <com.google.android.material.progressindicator.CircularProgressIndicator
-        android:id="@+id/progressBar"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:progressTint="@color/white"
-        android:backgroundTint="@color/transparent"
-        style="@style/Widget.Material3.CircularProgressIndicator"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <variable
+            name="data"
+            type="com.raviolini.core.domain.model.Item" />
+    </data>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/detail_gambarKos"
+                    android:layout_width="match_parent"
+                    android:layout_height="279dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/deskripsiGambar"
+                    android:src="@drawable/ravioli"
+                    app:avatar='@{data.imageUrl ?? ""}' />
+
+            </FrameLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/dark_bg"
+                android:contentDescription="@string/favorite"
+                app:srcCompat="@drawable/ic_unfav" />
+
+            <TextView
+                android:id="@+id/detail_namaKos"
+                style="@style/TextContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@{data.name}"
+                android:textSize="32sp"
+                tools:text="@string/name_kos_txt" />
+
+            <TextView
+                android:id="@+id/detail_alamatKos"
+                style="@style/TextContent.Subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@{data.address}"
+                android:textSize="12sp"
+                tools:text="@string/txt_alamat" />
+
+            <TextView
+                android:id="@+id/detail_deskripsiKos"
+                style="@style/TextContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:lineSpacingMultiplier="1"
+                android:text="@{data.description}"
+                android:textStyle=""
+                tools:text="@string/text_deskripsi" />
+
+            <TextView
+                style="@style/TextContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/detail_txt" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        style="@style/TextSpec.Field"
+                        android:text="@string/Gender_txt" />
+
+                    <TextView
+                        android:id="@+id/detail_genderRestriction"
+                        style="@style/TextSpec.Value"
+                        android:text="@{data.genderRestriction}"
+                        tools:text="@string/Gender_txt" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        style="@style/TextSpec.Field"
+                        android:text="@string/availableBeds_txt" />
+
+                    <TextView
+                        android:id="@+id/detail_availableBed"
+                        style="@style/TextSpec.Value"
+                        android:text="@{data.available_bedrooms.toString()}"
+                        tools:text="@string/TotalBeds_txt" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        style="@style/TextSpec.Field"
+                        android:text="@string/TotalBeds_txt" />
+
+                    <TextView
+                        android:id="@+id/detail_totalBed"
+                        style="@style/TextSpec.Value"
+                        android:text="@{data.total_bedrooms.toString()}"
+                        tools:text="@string/TotalBeds_txt" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        style="@style/TextSpec.Field"
+                        android:text="@string/price_txt" />
+
+                    <TextView
+                        android:id="@+id/detail_price"
+                        style="@style/TextSpec.Value"
+                        android:text="@{data.price.toString()}"
+                        tools:text="@string/price_txt" />
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

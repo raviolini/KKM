@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="search_placeholderHint">Cari Nama Kos di Sini</string>
-    <string name="main_name_placeholder">Nama KOS</string>
-    <string name="deskripsi_img_list">gambar kosnya</string>
-    <string name="txt_wm">watermark</string>
-    <string name="imagedescriptionNotFound">can\'t search for that query</string>
-    <string name="kos_not_found">Can\'t Find the data</string>
-    <string name="txt_ini_detail">ini detail</string>
-    <string name="search_for_kos">Search For A Boarding House Here</string>
-    <string name="item_not_found_txt">can\'t find item</string>
+    <string name="app_name">KKM</string>
+    <string name="txt_wm">Ini Logo</string>
+    <string name="empty_data">Empty Data</string>
+    <string name="search_placeholderHint">Cari Sesuatu Disini</string>
+    <string name="home_txt">Home</string>
+    <string name="favorite_txt">Favorite</string>
+    <string name="searchForKos_txt">Cari Kos Disini</string>
+    <string name="deskripsiGambar">gambar kos</string>
+    <string name="name_kos_txt">Nama Kos</string>
+    <string name="favorite">Tambahkan Ke Favorite</string>
+    <string name="txt_alamat">alamat kos</string>
+    <string name="text_deskripsi">Ini Deskripsi Kos</string>
+    <string name="detail_txt">Detail</string>
+    <string name="Gender_txt">Gender Restriction</string>
+    <string name="TotalBeds_txt">Total Bedrooms</string>
+    <string name="availableBeds_txt">Available Bedrooms</string>
+    <string name="price_txt">Price</string>
 </resources>

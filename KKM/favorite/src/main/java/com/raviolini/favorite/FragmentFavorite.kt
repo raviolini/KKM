@@ -11,9 +11,10 @@ import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.asthiseta.favorite.databinding.FragmentFavoriteBinding
 import com.raviolini.core.ui.ItemAdapter
 import com.raviolini.di.favoriteModule
-import com.raviolini.favorite.databinding.FragmentFavoriteBinding
+
 import com.raviolini.misc.ShowStates
 import org.koin.android.ext.android.getKoin
 import org.koin.android.viewmodel.ViewModelParameter

@@ -7,15 +7,42 @@ Developed by me and the boys, be part of us by [contributing](https://github.com
 
 ## Developement Snapshot
 
-> TODO : creating the details activity (still waiting the design from Noval)
+<details>
+  <summary>SplashScreen</summary>
+  
+  ![screenshoot](https://github.com/raviolini/dev-snapshot/blob/main/kkm/splash.png)
+  
+</details>
 
-### SplashScreen 
-<img src="https://github.com/raviolini/dev-snapshot/blob/main/kkm/splash.jpeg " width="300"/>
+<details>
+  <summary>Home</summary>
+  
+  ![screenshoot](https://github.com/raviolini/dev-snapshot/blob/main/kkm/home.png)
+  
+</details>
 
-### Home 
-<img src="https://github.com/raviolini/dev-snapshot/blob/main/kkm/home.jpeg" width="300"/>
+<details>
+  <summary>Search</summary>
+  
+  ![screenshoot](https://github.com/raviolini/dev-snapshot/blob/main/kkm/search.png)
+  
+</details>
 
-### Search 
-![!Alt Text](https://github.com/raviolini/dev-snapshot/blob/main/kkm/search.png) 
 
+<details>
+  <summary>Detail</summary>
+  
+  ![screenshoot](https://github.com/raviolini/dev-snapshot/blob/main/kkm/detail.png)
+  
+</details>
 
+<details>
+  <summary>Favorite</summary>
+  
+  ![screenshoot](https://github.com/raviolini/dev-snapshot/blob/main/kkm/addFav.png)
+
+  ![screenshoot](https://github.com/raviolini/dev-snapshot/blob/main/kkm/favorite.png)
+
+  ![screenshoot](https://github.com/raviolini/dev-snapshot/blob/main/kkm/unfav.png)
+  
+</details>

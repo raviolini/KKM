@@ -25,7 +25,7 @@
         android:layout_gravity="center"
 
         android:contentDescription="@string/txt_wm"
-        android:src="@drawable/byRaviolini"
+        android:src="@drawable/lightbgwatermark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

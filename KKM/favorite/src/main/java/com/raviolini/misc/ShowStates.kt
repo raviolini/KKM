@@ -1,7 +1,7 @@
 package com.raviolini.misc
 
 import android.view.View
-import com.raviolini.favorite.databinding.FragmentFavoriteBinding
+import com.asthiseta.favorite.databinding.FragmentFavoriteBinding
 
 
 interface ShowStates {

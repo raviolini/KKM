@@ -53,7 +53,7 @@ buildscript{
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:7.0.4"
+        classpath 'com.android.tools.build:gradle:7.1.2'
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigation_ver"
         classpath "com.squareup.leakcanary:leakcanary-deobfuscation-gradle-plugin:$leakcanary_ver"
 

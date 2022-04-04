@@ -23,7 +23,7 @@ android {
         targetSdk 31
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "BASE_URL" , '"https://kkmboiscuy.my.id/"')
+        buildConfigField("String", "BASE_URL", '"https://kkmboiscuy.my.id/"')
 
         consumerProguardFiles "consumer-rules.pro"
     }
